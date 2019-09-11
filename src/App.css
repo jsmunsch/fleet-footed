@@ -55,12 +55,6 @@
 }
 
 .list-section {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  overflow: scroll;
-  justify-content: center;
-  align-content: center;
   background-color: #aebfb0;
 }
 
