@@ -3,8 +3,13 @@ import Filter from "./Filter";
 
 function FilterSection() {
   return (
-    <div>
-      FilterSection <Filter />
+    <div className="filter-section">
+      <Filter />
+      <Filter />
+      <Filter />
+      <Filter />
+      <Filter />
+      <Filter />
     </div>
   );
 }

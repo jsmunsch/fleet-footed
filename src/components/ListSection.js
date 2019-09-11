@@ -3,8 +3,13 @@ import List from "./List";
 
 function ListSection() {
   return (
-    <div>
-      ListSection <List />
+    <div className="list-section">
+      <List />
+      <List />
+      <List />
+      <List />
+      <List />
+      <List />
     </div>
   );
 }
