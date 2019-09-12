@@ -1,15 +1,13 @@
 import React from "react";
-import List from "./List";
+import Tracks from "./Tracks";
+import { tracks } from "../api/tracks";
 
 function ListSection() {
   return (
     <div className="list-section">
-      <List />
-      <List />
-      <List />
-      <List />
-      <List />
-      <List />
+      {tracks.map(track => {
+        return <Tracks key={track.id} track={track} />;
+      })}
     </div>
   );
 }

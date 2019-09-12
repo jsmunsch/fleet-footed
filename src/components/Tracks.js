@@ -1,13 +1,14 @@
 import React from "react";
 
-function List() {
+function Tracks(props) {
   return (
     <div className="list-element">
       <div className="image-left"></div>
       <div className="track-info">
-        <h2>Name</h2>
+        <h2>{props.track.title}</h2>
         <div className="show-icons">
-          <i className="material-icons">directions_run</i> 8km
+          <i className="material-icons">directions_run</i>
+          {props.track.distance}
           <i className="material-icons">timer</i> 01:54h
           <i className="material-icons">speed</i> super fast
         </div>
@@ -16,4 +17,4 @@ function List() {
   );
 }
 
-export default List;
+export default Tracks;
