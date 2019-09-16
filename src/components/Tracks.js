@@ -9,8 +9,10 @@ function Tracks(props) {
         <div className="show-icons">
           <i className="material-icons">directions_run</i>
           {props.track.distance}
-          <i className="material-icons">timer</i> 01:54h
-          <i className="material-icons">speed</i> super fast
+          <i className="material-icons">timer</i>
+          {props.track.time}
+          <i className="material-icons">speed</i>
+          {props.track.distance}
         </div>
       </div>
     </div>

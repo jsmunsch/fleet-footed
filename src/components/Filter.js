@@ -3,7 +3,11 @@ import React from "react";
 function Filter(props) {
   return (
     <div className="filter-element">
-      <select>
+      <select
+        onChange={event =>
+          props.onChange([props.filter.name, event.target.value])
+        }
+      >
         <option>{props.filter.name}</option>
         {props.filter.options.map(data => {
           return <option>{data}</option>;

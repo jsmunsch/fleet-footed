@@ -5,11 +5,14 @@ import ListSection from "./components/ListSection";
 import Header from "./components/Header";
 
 function App() {
+  function handleFilterChange(filtername, filterpups) {
+    console.log(filtername, filterpups);
+  }
   return (
     <div className="App">
       <Header />
       <main className="main-grid">
-        <FilterSection />
+        <FilterSection onFilterChange={handleFilterChange} />
         <ListSection />
       </main>
     </div>
