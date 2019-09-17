@@ -1,18 +1,18 @@
 import React from "react";
 
-function Tracks(props) {
+function Tracks({ track }) {
   return (
     <div className="list-element">
       <div className="image-left"></div>
       <div className="track-info">
-        <h2>{props.track.title}</h2>
+        <h2>{track.title}</h2>
         <div className="show-icons">
           <i className="material-icons">directions_run</i>
-          {props.track.distance}
+          {track.distance}
           <i className="material-icons">timer</i>
-          {props.track.time}
+          {track.time}
           <i className="material-icons">speed</i>
-          {props.track.distance}
+          {track.distance}
         </div>
       </div>
     </div>

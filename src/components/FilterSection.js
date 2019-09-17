@@ -8,7 +8,7 @@ function FilterSection(props) {
       {filters.map(filter => {
         return (
           <Filter
-            key={filter.id}
+            key={filter.name}
             filter={filter}
             onChange={props.onFilterChange}
           />

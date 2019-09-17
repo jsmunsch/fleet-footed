@@ -69,9 +69,7 @@
   align-items: center;
   margin: 15px;
   box-shadow: 2px 1px 1px 0px rgba(90, 90, 90, 0.75);
-  min-width: 300px;
-  max-width: 500px;
-  flex-grow: 1;
+  min-width: 400px;
 }
 
 .image-left {

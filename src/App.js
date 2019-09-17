@@ -5,18 +5,22 @@ import ListSection from "./components/ListSection";
 import Header from "./components/Header";
 
 function App() {
+  const [filters, setFilter] = React.useState("");
+
   function handleFilterChange(filtername, filterpups) {
-    console.log(filtername, filterpups);
+    const newFilters = { ...filters };
+    newFilters[filtername] = filterpups;
+    setFilter(newFilters);
   }
+
   return (
     <div className="App">
       <Header />
       <main className="main-grid">
         <FilterSection onFilterChange={handleFilterChange} />
-        <ListSection />
+        <ListSection selectedFilters={filters} />
       </main>
     </div>
   );
 }
-
 export default App;
