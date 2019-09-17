@@ -9,11 +9,23 @@ function ListSection({ selectedFilters }) {
     if (keepTrack && selectedFilters.difficulty) {
       keepTrack = tracks.difficulty.includes(selectedFilters.difficulty);
     }
-    if (keepTrack && selectedFilters.categories) {
-      keepTrack = tracks.categories.includes(selectedFilters.categories);
+    if (keepTrack && selectedFilters.area) {
+      keepTrack = tracks.categories.includes(selectedFilters.area);
     }
     if (keepTrack && selectedFilters.length) {
       keepTrack = tracks.length.includes(selectedFilters.length);
+    }
+    if (selectedFilters.difficulty === "difficulty") {
+      delete selectedFilters.difficulty;
+      return true;
+    }
+    if (selectedFilters.area === "area") {
+      delete selectedFilters.area;
+      return true;
+    }
+    if (selectedFilters.length === "length") {
+      delete selectedFilters.length;
+      return true;
     }
     return keepTrack;
   });
