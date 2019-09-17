@@ -5,20 +5,17 @@ import { tracks } from "../api/tracks";
 function ListSection({ selectedFilters }) {
   console.log(selectedFilters);
   const filteredTracks = tracks.filter(tracks => {
-    return true;
-    // if (!selectedFilter) {
-    //   return true;
-    // }
-    // if (selectedFilter.name === "length") {
-    //   return tracks.length.includes(selectedFilter.value);
-    // }
-    // if (selectedFilter.name === "difficulty") {
-    //   return tracks.difficulty.includes(selectedFilter.value);
-    // }
-    // if (selectedFilter.name === "area") {
-    //   return tracks.categories.includes(selectedFilter.value);
-    // }
-    // return true;
+    let keepTrack = true;
+    if (keepTrack && selectedFilters.difficulty) {
+      keepTrack = tracks.difficulty.includes(selectedFilters.difficulty);
+    }
+    if (keepTrack && selectedFilters.categories) {
+      keepTrack = tracks.categories.includes(selectedFilters.categories);
+    }
+    if (keepTrack && selectedFilters.length) {
+      keepTrack = tracks.length.includes(selectedFilters.length);
+    }
+    return keepTrack;
   });
   return (
     <div className="list-section">
