@@ -17,15 +17,12 @@ function ListSection({ selectedFilters }) {
     }
     if (selectedFilters.difficulty === "difficulty") {
       delete selectedFilters.difficulty;
-      return true;
     }
     if (selectedFilters.area === "area") {
       delete selectedFilters.area;
-      return true;
     }
     if (selectedFilters.length === "length") {
       delete selectedFilters.length;
-      return true;
     }
     return keepTrack;
   });
