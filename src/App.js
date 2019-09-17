@@ -10,7 +10,17 @@ function App() {
   function handleFilterChange(filtername, filterpups) {
     const newFilters = { ...filters };
     newFilters[filtername] = filterpups;
+    console.log(newFilters);
     setFilter(newFilters);
+    if (newFilters.difficulty === "difficulty") {
+      delete newFilters.difficulty;
+    }
+    if (newFilters.area === "area") {
+      delete newFilters.area;
+    }
+    if (newFilters.length === "length") {
+      delete newFilters.length;
+    }
   }
 
   return (

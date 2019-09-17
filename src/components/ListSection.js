@@ -15,15 +15,6 @@ function ListSection({ selectedFilters }) {
     if (keepTrack && selectedFilters.length) {
       keepTrack = tracks.length.includes(selectedFilters.length);
     }
-    if (selectedFilters.difficulty === "difficulty") {
-      delete selectedFilters.difficulty;
-    }
-    if (selectedFilters.area === "area") {
-      delete selectedFilters.area;
-    }
-    if (selectedFilters.length === "length") {
-      delete selectedFilters.length;
-    }
     return keepTrack;
   });
   return (
