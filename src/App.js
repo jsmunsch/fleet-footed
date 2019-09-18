@@ -2,8 +2,23 @@ import React from "react";
 import "./App.css";
 import FilterSection from "./components/FilterSection";
 import ListSection from "./components/ListSection";
-import Header from "./components/Header";
+import Title from "./components/Title";
+import styled from "styled-components";
 
+const AppLayout = styled.div`
+  max-width: 100%;
+  display: grid;
+  grid-template-rows: 50px 1fr;
+  grid-template-columns: 1fr;
+  width: 100vw;
+  height: 100vh;
+`;
+
+const Main = styled.main`
+  display: grid;
+  grid-template-rows: 80px 1fr;
+  grid-template-columns: 1fr;
+`;
 function App() {
   const [filters, setFilter] = React.useState("");
 
@@ -24,13 +39,13 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <Header />
-      <main className="main-grid">
+    <AppLayout>
+      <Title />
+      <Main>
         <FilterSection onFilterChange={handleFilterChange} />
         <ListSection selectedFilters={filters} />
-      </main>
-    </div>
+      </Main>
+    </AppLayout>
   );
 }
 export default App;

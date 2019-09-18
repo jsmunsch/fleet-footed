@@ -1,6 +1,14 @@
 import React from "react";
 import Tracks from "./Tracks";
 import { tracks } from "../api/tracks";
+import styled from "styled-components";
+
+const ListSectionDiv = styled.div`
+  background-color: #aebfb0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+`;
 
 function ListSection({ selectedFilters }) {
   console.log(selectedFilters);
@@ -18,11 +26,11 @@ function ListSection({ selectedFilters }) {
     return keepTrack;
   });
   return (
-    <div className="list-section">
+    <ListSectionDiv>
       {filteredTracks.map(track => {
         return <Tracks key={track.id} track={track} />;
       })}
-    </div>
+    </ListSectionDiv>
   );
 }
 
