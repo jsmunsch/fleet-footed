@@ -37,26 +37,21 @@ const IconDisplay = styled.div`
   flex-wrap: wrap;
 `;
 
-const MaterialIcons = styled.i`
-  width: 20%;
-`;
-
 function Tracks({ track }) {
   return (
     <ListElement>
-      <CardImage>
-        <TrackInfo>
-          <h2>{track.title}</h2>
-          <IconDisplay>
-            <MaterialIcons>directions_run</MaterialIcons>
-            {track.distance}
-            <MaterialIcons>timer</MaterialIcons>
-            {track.time}
-            <MaterialIcons>speed</MaterialIcons>
-            {track.distance}
-          </IconDisplay>
-        </TrackInfo>
-      </CardImage>
+      <CardImage></CardImage>
+      <TrackInfo>
+        <h2>{track.title}</h2>
+        <IconDisplay>
+          <i className="material-icons">directions_run</i>
+          {track.distance}
+          <i className="material-icons">timer</i>
+          {track.time}
+          <i className="material-icons">speed</i>
+          {track.distance}
+        </IconDisplay>
+      </TrackInfo>
     </ListElement>
   );
 }

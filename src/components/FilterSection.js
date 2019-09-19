@@ -18,7 +18,8 @@ const FilterDiv = styled.div`
   box-shadow: 0px 3px 5px 0px rgba(87, 87, 87, 1);
 `;
 
-function FilterSection(props) {
+function FilterSection({ onFilterChange, selectedFilters }) {
+  console.log(selectedFilters);
   return (
     <FilterDiv>
       {filters.map(filter => {
@@ -26,7 +27,8 @@ function FilterSection(props) {
           <Filter
             key={filter.name}
             filter={filter}
-            onChange={props.onFilterChange}
+            onChange={onFilterChange}
+            selectedValue={selectedFilters[filter.name]}
           />
         );
       })}

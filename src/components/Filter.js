@@ -13,10 +13,14 @@ const SingleFilter = styled.div`
   background-color: #e8ffea;
 `;
 
-function Filter({ filter, onChange }) {
+function Filter({ filter, onChange, selectedValue }) {
+  console.log(selectedValue);
   return (
     <SingleFilter>
-      <select onChange={event => onChange(filter.name, event.target.value)}>
+      <select
+        value={selectedValue}
+        onChange={event => onChange(filter.name, event.target.value)}
+      >
         <option>{filter.name}</option>
         {filter.options.map(data => {
           return <option>{data}</option>;
